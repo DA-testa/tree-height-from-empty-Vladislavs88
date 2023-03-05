@@ -11,16 +11,16 @@ def compute_height(n, parents):
   
   koks= numpy.array(parents)
   for i in range(n):
-    lielums=max(next(koks,i), lielums)
+      lielums=max(next(koks,i), lielums)
   return lielums
 
 def next(koks,i):
-  dzilums=1
-  dala=koks[i]
-  while(dala != -1):
-    dala=koks[dala]
-    dzilums=dzilums+1
-  return dzilums  
+    dzilums=1
+    dala=koks[i]
+    while(dala != -1):
+      dala=koks[dala]
+      dzilums=dzilums+1
+    return dzilums
 
 
 
@@ -31,7 +31,7 @@ def main():
     if "F" in teksts:
         nosaukums=input()
         if "a" not in nosaukums:
-            with open(str("test/" + nosaukums), mode="r") as fail:
+          with open(str("test/" + nosaukums), mode="r") as fail:
                 skaitit=int(fail.readline())
                 parents=list(map(int,input().split()))
         else:
