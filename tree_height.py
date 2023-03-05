@@ -13,24 +13,17 @@ def compute_height(n, parents):
             root=i
         else:
             children[parents].append(i)
- def compute_dzilums(mezgls):
-    if not kids[mezgls]:
+            
+            
+    def compute_dzilums(mezgls):
+      if not kids[mezgls]:
         return 1
-    max_height = 0
-    for berns in kids[mezgls]:
+      max_height = 0
+      for berns in kids[mezgls]:
         dzilums=compute_dzilums(berns)
         max_height=max(max_height,dzilums)
-    return max_height +1
-return compute_dzilums(root)
-    
-#     if node not in children:
-#         return height
-#     else:
-#         childr_heights=[]
-#         for childr in kids[mezgls]:
-#             childr_heights.append(compute_height(childr,height+1))
-       
-
+      return max_height +1
+    return compute_dzilums(root)
 
 def main():
     teksts=input()
