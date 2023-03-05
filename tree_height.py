@@ -37,10 +37,7 @@ def main():
         
         cipari=int(input())
         vecaki=list(map(int, input().split()))
-      else:
-      print("kluda")
-     
-        
+
     elif "F" in teksts:
         nosaukums=input()
         if "a" and "A"  not in nosaukums:
