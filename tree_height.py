@@ -8,7 +8,7 @@ import numpy
                 
 def compute_height(n, parents):
   koks=numpy.zeros(n)
-  def dzilums():
+  def dzilums(i):
     if parents[i] == -1:
       koks[i] =1
     
