@@ -7,12 +7,12 @@ import numpy
 
                 
 def compute_height(n, parents):
-  lielums=0
+    lielums=0
   
-  koks= numpy.array(parents)
-  for i in range(n):
+    koks= numpy.array(parents)
+    for i in range(n):
       lielums=max(next(koks,i), lielums)
-  return lielums
+    return lielums
 
 def next(koks,i):
     dzilums=1
@@ -28,7 +28,14 @@ def next(koks,i):
 def main():
     teksts=input()
     
-    if "F" in teksts:
+    
+    if "I" in teksts:
+        cipari=int(input())
+        parents=list(map(int,input().split()))
+    else:
+        print("Kluda")
+    
+    elif "F" in teksts:
         nosaukums=input()
         if "a" not in nosaukums:
           with open(str("test/"+nosaukums), mode="r") as fail:
@@ -36,15 +43,15 @@ def main():
                 parents=list(map(int,input().split()))
         else:
           print("Kluda")
-          
+    print(compute_height(skaitit, parents))      
     
-    elif "I" in teksts:
+#     elif "I" in teksts:
       
-        cipari=int(input())
-        parents=list(map(int,input().split()))
-    else:
-        print("Kluda")
-    print(compute_height(cipari, parents))  
+#         cipari=int(input())
+#         parents=list(map(int,input().split()))
+#     else:
+#         print("Kluda")
+#     print(compute_height(cipari, parents))  
 
 
       
