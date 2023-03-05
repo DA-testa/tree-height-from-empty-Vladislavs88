@@ -12,12 +12,15 @@ def compute_height(n, parents):
     if parents[i] == -1:
       koks[i] =1
     
+    elif koks[i] !=0:
+      return koks[i]
+ 
+    
     else:
       koks[i]=dzilums(parents[i])+1
     return koks[i]
     
-    elif koks[i] !=0:
-      return koks[i]
+
     
   for i in range(n):
     dzilums(i)
