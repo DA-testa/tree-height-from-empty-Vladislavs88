@@ -23,24 +23,7 @@ def next(koks,i):
   return dzilums  
 
 
-  
-#   def dzilums(i):
-#     if parents[i] == -1:
-#       koks[i] =1
-    
-#     if koks[i] !=0:
-#       return koks[i]
- 
-    
-#     else:
-#       koks[i]=dzilums(parents[i])+1
-#     return koks[i]
-    
 
-    
-#   for i in range(n):
-#     dzilums(i)
-#   return int(max(koks))  
   
 def main():
     teksts=input()
@@ -71,5 +54,4 @@ def main():
 sys.setrecursionlimit(10**7)  # max depth of recursion
 threading.stack_size(2**27)   # new thread will get stack of such size
 threading.Thread(target=main).start()
-main()
-# print(numpy.array([1,2,3]))
+
