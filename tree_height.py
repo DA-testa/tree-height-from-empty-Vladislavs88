@@ -29,12 +29,12 @@ def main():
     teksts=input()
     
     if "I" in teksts:
-      
-        cipari=int(input())
         parents=list(map(int,input().split()))
+        cipari=int(input())
+        
     else:
         print("kluda")
-    print(compute_height(parents, cipari))  
+    print(compute_height(cipari, parents))  
 
 
     if "F" in teksts:
