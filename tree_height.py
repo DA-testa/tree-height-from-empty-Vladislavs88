@@ -2,29 +2,27 @@
 
 import sys
 import threading
-# import numpy
+import numpy
 
 
                 
 def compute_height(n, parents):
-    kids= [[] for_ in range(n) ]
-    for i in range(n):
-        if parents[i]==-1:
-            root=i
-        else:
-            children[parents].append(i)
-            
-            
-    def compute_dzilums(mezgls):
-        if not kids[mezgls]:
-            return 1
-        max_height = 0
-        for berns in kids[mezgls]:
-            dzilums=compute_dzilums(berns)
-            max_height=max(max_height,dzilums)
-        return max_height +1
-    return compute_dzilums(root)
-
+  koks=numpy.zeros(n)
+  def dzilums():
+    if parents[i] == -1:
+      koks[i] =1
+    
+    else:
+      koks[i]=dzilums(parents[i])+1
+    return koks[i]
+    
+    elif koks[i] !=0:
+      return koks[i]
+    
+  for i in range(n):
+    dzilums(i)
+  return int(max(koks))  
+  
 def main():
     teksts=input()
     
@@ -32,7 +30,10 @@ def main():
         cipari=int(input())
         parents=list(map(int,input().split()))
         viss=compute_height(n, parents)
-        print(viss)       
+        print(viss)
+    else:
+      print("Kluda")  
+      
     elif "F" in teksts:
         nosaukums=input()
         if "a" not in nosaukums:
@@ -43,7 +44,41 @@ def main():
                 print(viss)
     else:
         print("Kluda")
-        exit()
+        
+  
+    
+    
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+#     kids= [[] for_ in range(n) ]
+#     for i in range(n):
+#         if parents[i]==-1:
+#             root=i
+#         else:
+#             children[parents].append(i)
+            
+     
+            
+#     def compute_dzilums(mezgls):
+#         if not kids[mezgls]:
+#             return 1
+#         max_height = 0
+#         for berns in kids[mezgls]:
+#             dzilums=compute_dzilums(berns)
+#             max_height=max(max_height,dzilums)
+#         return max_height +1
+#     return compute_dzilums(root)
+
+
+#         exit()
         
 
     
