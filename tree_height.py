@@ -31,6 +31,8 @@ def main():
     if "I" in teksts:
         cipari=int(input())
         parents=list(map(int,input().split()))
+    else:
+      print("Kluda")
 
 
       
