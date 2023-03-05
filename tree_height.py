@@ -31,7 +31,7 @@ def main():
     if "I" in teksts:
         
         cipari=int(input())
-        vecaki=list(map(int, int(input().split())))
+        vecaki=list(map(int, input().split()))
         
     else:
         print("kluda")
@@ -42,10 +42,11 @@ def main():
         nosaukums=input()
         if "a" and "A"  not in nosaukums:
           with open("test/" + nosaukums, 'r') as fail:
-                skaitit=int(fail.readline())
-                parents=list(map(int,input().split()))
+                cipari=int(fail.readline())
+                vecaki=list(map(int,input().split()))
         else:
           print("kluda")
+    print(compute_height(cipari, vecaki))      
           
     
 
