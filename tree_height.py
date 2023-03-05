@@ -34,7 +34,7 @@ def main():
         parents=list(map(int,input().split()))
     else:
         print("kluda")
-        print(compute_height(cipari, parents))  
+    print(compute_height(parents, cipari))  
 
 
     if "F" in teksts:
