@@ -7,7 +7,7 @@ import threading
 
                 
 def compute_height(n, parents):
-    kids= []
+    kids= [[] for_ in range(n) ]
     for i in range(n):
         if parents[i]==-1:
             root=i
@@ -16,13 +16,13 @@ def compute_height(n, parents):
             
             
     def compute_dzilums(mezgls):
-      if not kids[mezgls]:
-        return 1
-      max_height = 0
-      for berns in kids[mezgls]:
-        dzilums=compute_dzilums(berns)
-        max_height=max(max_height,dzilums)
-      return max_height +1
+        if not kids[mezgls]:
+            return 1
+        max_height = 0
+        for berns in kids[mezgls]:
+            dzilums=compute_dzilums(berns)
+            max_height=max(max_height,dzilums)
+        return max_height +1
     return compute_dzilums(root)
 
 def main():
@@ -36,12 +36,14 @@ def main():
     elif "F" in teksts:
         nosaukums=input()
         if "a" not in nosaukums:
-            with open("test/" + nosaukums, "r") as fail:
-                skaitit=int(fail.readline().split()))
+            with open("test/" + nosaukums, 'r') as fail:
+                skaitit=int(fail.readline())
+                parents=list(map(int,input().split()))
                 viss=compute_height(n, parents)
                 print(viss)
     else:
         print("Kluda")
+        exit()
         
 
     
