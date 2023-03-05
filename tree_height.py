@@ -31,7 +31,7 @@ def main():
     if "I" in teksts:
         
         cipari=int(input())
-        vecaki=list(map(int,input().split()))
+        vecaki=list(map(int, int(input().split())))
         
     else:
         print("kluda")
