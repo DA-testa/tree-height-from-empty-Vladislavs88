@@ -2,49 +2,62 @@
 
 import sys
 import threading
-import numpy
+# import numpy
 
     n=int(input())
     parents=list(map(int,input().split()))
 children= {}
+
+                
+def compute_height(n, parents):
+    kids= []
     for i in range(n):
         if parents[i]==-1:
             root=i
         else:
-            if parents[i] not in children;
-            children[parents[i]]=[i]
+            if parents[i] not in kids;
+            kids[parents[i]]=[i]
             else:
-                children[parents[i]].append(i)
-                
-def compute_height(n, parents):
+                kids[parents[i]].append(i)
+ def compute_dzilums(mezgls):
+    if not kids[mezgls]:
+        return 1
     max_height = 0
-    if node not in children:
-        return height
-    else:
-        childr_heights=[]
-        for childr in children[node]:
-            childr_heights.append(compute_height(childr,height+1))
-        
-            
+    for berns in kids[mezgls]:
+        dzilums=compute_dzilums(berns)
+        max_height=max(maksimals,dzilums)
+    return max_height +1
+return compute_dzilums(root)
     
-    # Write this function
-  
-    # Your code here
-    return max_height
-height=compute_height(root,0)
-print(height)
+#     if node not in children:
+#         return height
+#     else:
+#         childr_heights=[]
+#         for childr in kids[mezgls]:
+#             childr_heights.append(compute_height(childr,height+1))
+       
 
 
 def main():
-    # implement input form keyboard and from files
+    teksts=input()
     
-    # let user input file name to use, don't allow file names with letter a
-    # account for github input inprecision
+    if "I" in teksts:
+        cipari=int(input())
+        parents=list(map(int,input().split()))
+        viss=compute_height(n, parents)
+        print(viss)       
+    elif "F" in teksts:
+        nosaukums=input()
+        if "a" not in nosaukums:
+            with open("test/" + nosaukums, "r") as fail:
+                skaitit=int(fail.readline().split()))
+                viss=compute_height(n, parents)
+                print(viss)
+    else:
+        print("Kluda")
+        
+
     
-    # input number of elements
-    # input values in one variable, separate with space, split these values in an array
-    # call the function and output it's result
-    pass
 
 # In Python, the default limit on recursion depth is rather low,
 # so raise it here for this problem. Note that to take advantage
