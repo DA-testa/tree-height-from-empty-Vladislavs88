@@ -35,7 +35,7 @@ def main():
         vecaki=list(map(int, input().split()))
         else:
           print("kluda")
-        print(compute_height(cipari, vecaki))  
+    print(compute_height(cipari, vecaki))  
         
     elif "F" in teksts:
         nosaukums=input()
