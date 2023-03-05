@@ -28,25 +28,28 @@ def next(koks,i):
 def main():
     teksts=input()
     
-    if "I" in teksts:
-        cipari=int(input())
-        parents=list(map(int,input().split()))
-    else:
-      print("Kluda")
-
-
-      
-    elif "F" in teksts:
+    if "F" in teksts:
         nosaukums=input()
         if "a" not in nosaukums:
             with open(str("test/" + nosaukums), mode="r") as fail:
                 skaitit=int(fail.readline())
                 parents=list(map(int,input().split()))
-                
+        else:
+          print("Kluda")
+          
+    
+    elif "I" in teksts:
+      
+        cipari=int(input())
+        parents=list(map(int,input().split()))
     else:
         print("Kluda")
-    ptint(compute_height(skaitit,parents))
-        
+    print(compute_height(cipari, parents))  
+
+
+      
+    
+                
 
     
 
