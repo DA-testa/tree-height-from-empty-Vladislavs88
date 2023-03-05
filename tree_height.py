@@ -43,7 +43,7 @@ def main():
                 parents=list(map(int,input().split()))
         else:
           print("Kluda")
-    print(compute_height(skaitit, parents))      
+    print(compute_height(cipari, parents))      
     
 #     elif "I" in teksts:
       
