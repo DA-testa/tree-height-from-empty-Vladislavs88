@@ -44,7 +44,7 @@ def main():
                 vecaki=list(map(int,fail.readline().split()))
         else:
           print("kluda")
-    print(compute_height(cipari, vecaki))    
+      print(compute_height(cipari, vecaki))    
  
         
     
