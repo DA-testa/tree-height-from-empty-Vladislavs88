@@ -45,7 +45,7 @@ def main():
         else:
           print("kluda")
     else:
-      print(compute_height(cipari, vecaki))    
+    print(compute_height(cipari, vecaki))    
  
         
     
