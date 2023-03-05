@@ -31,7 +31,7 @@ def main():
     if "F" in teksts:
         nosaukums=input()
         if "a" not in nosaukums:
-          with open(str("test/" + nosaukums), mode="r") as fail:
+          with open(str("test/"+nosaukums), mode="r") as fail:
                 skaitit=int(fail.readline())
                 parents=list(map(int,input().split()))
         else:
