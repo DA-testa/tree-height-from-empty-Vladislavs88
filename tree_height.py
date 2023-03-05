@@ -45,9 +45,9 @@ def main():
                 cipari=int(fail.readline())
                 vecaki=list(map(int,fail.readline().split()))
         else:
-          print("kluda")
+            print("kluda")
     else:
-      print(compute_height(cipari, vecaki))
+        print(compute_height(cipari, vecaki))
             
  
         
