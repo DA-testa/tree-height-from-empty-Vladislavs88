@@ -33,7 +33,7 @@ def main():
         if "a" and "A"  not in nosaukums:
           with open("test/" + nosaukums, 'r') as fail:
                 cipari=int(fail.readline())
-                vecaki=list(map(int,input().split()))
+                vecaki=list(map(int,fail.readline().split()))
         else:
           print("kluda")    
           
