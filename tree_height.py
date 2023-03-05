@@ -28,6 +28,15 @@ def next(koks,i):
 def main():
     teksts=input()
     
+    if "I" in teksts:
+      
+        cipari=int(input())
+        parents=list(map(int,input().split()))
+    else:
+        print("Kluda")
+    print(compute_height(cipari, parents))  
+
+
     if "F" in teksts:
         nosaukums=input()
         if "a" not in nosaukums:
@@ -38,13 +47,7 @@ def main():
           print("Kluda")
           
     
-    elif "I" in teksts:
-      
-        cipari=int(input())
-        parents=list(map(int,input().split()))
-    else:
-        print("Kluda")
-    print(compute_height(cipari, parents))  
+
 
 
       
