@@ -29,21 +29,19 @@ def main():
     if "I" in teksts:
         cipari=int(input())
         parents=list(map(int,input().split()))
-        viss=compute_height(n, parents)
-        print(viss)
-    else:
-      print("Kluda")  
+
+
       
     elif "F" in teksts:
         nosaukums=input()
         if "a" not in nosaukums:
-            with open("test/" + nosaukums, 'r') as fail:
+            with open(str("test/" + nosaukums), mode="r") as fail:
                 skaitit=int(fail.readline())
                 parents=list(map(int,input().split()))
-                viss=compute_height(n, parents)
-                print(viss)
+                
     else:
         print("Kluda")
+    ptint(compute_height(skaitit,parents))
         
   
     
