@@ -7,24 +7,40 @@ import numpy
 
                 
 def compute_height(n, parents):
-  koks=numpy.zeros(n)
-  def dzilums(i):
-    if parents[i] == -1:
-      koks[i] =1
+  lielums=0
+  
+  koks= numpy.array(parents)
+  for i in range(n):
+    lielums=max(next(koks,i), lielums)
+  return lielums
+
+def next(koks,i):
+  dzilums=1
+  dala=koks[i]
+  while(dala != -1):
+    dala=koks[dala]
+    dzilums=dzilums+1
+  return dzilums  
+
+
+  
+#   def dzilums(i):
+#     if parents[i] == -1:
+#       koks[i] =1
     
-    if koks[i] !=0:
-      return koks[i]
+#     if koks[i] !=0:
+#       return koks[i]
  
     
-    else:
-      koks[i]=dzilums(parents[i])+1
-    return koks[i]
+#     else:
+#       koks[i]=dzilums(parents[i])+1
+#     return koks[i]
     
 
     
-  for i in range(n):
-    dzilums(i)
-  return int(max(koks))  
+#   for i in range(n):
+#     dzilums(i)
+#   return int(max(koks))  
   
 def main():
     teksts=input()
@@ -45,41 +61,6 @@ def main():
     else:
         print("Kluda")
     ptint(compute_height(skaitit,parents))
-        
-  
-    
-    
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-#     kids= [[] for_ in range(n) ]
-#     for i in range(n):
-#         if parents[i]==-1:
-#             root=i
-#         else:
-#             children[parents].append(i)
-            
-     
-            
-#     def compute_dzilums(mezgls):
-#         if not kids[mezgls]:
-#             return 1
-#         max_height = 0
-#         for berns in kids[mezgls]:
-#             dzilums=compute_dzilums(berns)
-#             max_height=max(max_height,dzilums)
-#         return max_height +1
-#     return compute_dzilums(root)
-
-
-#         exit()
         
 
     
