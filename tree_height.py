@@ -28,7 +28,16 @@ def next(koks,i):
 def main():
     teksts=input()
     
-    if "I" in teksts:
+    if "F" in teksts:
+        nosaukums=input()
+        if "a" and "A"  not in nosaukums:
+          with open("test/" + nosaukums, 'r') as fail:
+                cipari=int(fail.readline())
+                vecaki=list(map(int,input().split()))
+        else:
+          print("kluda")    
+          
+    elif "I" in teksts:
         
         cipari=int(input())
         vecaki=list(map(int, input().split()))
@@ -37,24 +46,6 @@ def main():
         print("kluda")
     print(compute_height(cipari, vecaki))  
 
-
-    if "F" in teksts:
-        nosaukums=input()
-        if "a" and "A"  not in nosaukums:
-          with open("test/" + nosaukums, 'r') as fail:
-                cipari=int(fail.readline())
-                vecaki=list(map(int,input().split()))
-        else:
-          print("kluda")
-    print(compute_height(cipari, vecaki))      
-          
-    
-
-
-
-      
-    
-                
 
     
 
