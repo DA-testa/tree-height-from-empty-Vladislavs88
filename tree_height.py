@@ -15,9 +15,9 @@ def compute_height(n, parents):
   return lielums
 
 def next(koks,i):
-    dzilums=0
+    dzilums=1
     dala=koks[i]
-    while(dala != -1):
+    while(dala != -1 ):
       dala=koks[dala]
       dzilums=dzilums+1
     return dzilums
@@ -31,11 +31,11 @@ def main():
     if "I" in teksts:
         
         cipari=int(input())
-        parents=list(map(int,input().split()))
+        vecaki=list(map(int,input().split()))
         
     else:
         print("kluda")
-    print(compute_height(cipari, parents))  
+    print(compute_height(cipari, vecaki))  
 
 
     if "F" in teksts:
