@@ -12,17 +12,14 @@ def compute_height(n, parents):
         if parents[i]==-1:
             root=i
         else:
-            if parents[i] not in kids;
-            kids[parents[i]]=[i]
-            else:
-                kids[parents[i]].append(i)
+            children[parents].append(i)
  def compute_dzilums(mezgls):
     if not kids[mezgls]:
         return 1
     max_height = 0
     for berns in kids[mezgls]:
         dzilums=compute_dzilums(berns)
-        max_height=max(maksimals,dzilums)
+        max_height=max(max_height,dzilums)
     return max_height +1
 return compute_dzilums(root)
     
