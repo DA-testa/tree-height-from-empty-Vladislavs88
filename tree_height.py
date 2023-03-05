@@ -4,12 +4,35 @@ import sys
 import threading
 import numpy
 
-
+    n=int(input())
+    parents=list(map(int,input().split()))
+children= {}
+    for i in range(n):
+        if parents[i]==-1:
+            root=i
+        else:
+            if parents[i] not in children;
+            children[parents[i]]=[i]
+            else:
+                children[parents[i]].append(i)
+                
 def compute_height(n, parents):
-    # Write this function
     max_height = 0
+    if node not in children:
+        return height
+    else:
+        childr_heights=[]
+        for childr in children[node]:
+            childr_heights.append(compute_height(childr,height+1))
+        
+            
+    
+    # Write this function
+  
     # Your code here
     return max_height
+height=compute_height(root,0)
+print(height)
 
 
 def main():
