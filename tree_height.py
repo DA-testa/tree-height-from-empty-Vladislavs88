@@ -33,8 +33,8 @@ def main():
         cipari=int(input())
         parents=list(map(int,input().split()))
     else:
-        print("A")
-    print(compute_height(cipari, parents))  
+        print("kluda")
+        print(compute_height(cipari, parents))  
 
 
     if "F" in teksts:
@@ -44,7 +44,7 @@ def main():
                 skaitit=int(fail.readline())
                 parents=list(map(int,input().split()))
         else:
-          print("A")
+          print("kluda")
           
     
 
