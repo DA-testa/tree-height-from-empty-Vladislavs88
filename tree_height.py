@@ -33,7 +33,7 @@ def main():
         cipari=int(input())
         parents=list(map(int,input().split()))
     else:
-        print("Kluda")
+        print("A")
     print(compute_height(cipari, parents))  
 
 
@@ -44,7 +44,7 @@ def main():
                 skaitit=int(fail.readline())
                 parents=list(map(int,input().split()))
         else:
-          print("Kluda")
+          print("A")
           
     
 
